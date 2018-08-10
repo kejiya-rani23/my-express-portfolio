@@ -1,0 +1,52 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+        <h1 class="h2">Blog</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group mr-2">
+                <button class="btn btn-sm btn-outline-secondary">
+                    <span data-feather="plus-square"></span>
+                    Create New
+                </button>
+                <button class="btn btn-sm btn-outline-secondary">
+                    <span data-feather="upload"></span>
+                    Upload
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Alias</th>
+                    <th>Tags</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each blogs}}
+                <tr>
+                    <td><a href="#"><img width="100" src="{{image}}"></a></td>
+                    <td><a href="#">{{name}}</a></td>
+                    <td><a href="#">{{alias}}</a></td>
+                    <td><a href="">{{tag.name}}</a></td>
+                    <td>
+                        <a class="" href="#">
+                            <span data-feather="alert-circle"></span>
+                        </a>
+                        <a class="" href="#">
+                            <span data-feather="x-circle"></span>
+                        </a>
+                        <a class="" href="#">
+                            <span data-feather="copy"></span>
+                        </a>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</main>

@@ -1,0 +1,168 @@
+<main role="main">
+    <div class="album py-3 bg-light">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-3 project-detail-sb">
+                    {{!-- <div class="project-sidebar-block no-top-margin">
+                        <h2 class="no-top-margin">Manohar Negi</h2>
+                    </div>
+                    <hr> --}}
+
+                    <div class="project-sidebar-block no-top-margin">
+                        <img class="img-fluid" src="/images/kejiya.jpg">
+                    </div>
+                    <hr>
+
+                    <div class="project-sidebar-block">
+                        <h2>Social Profiles</h2>
+                        <ul class="social"> 
+                            <li>
+                                <a href="https://www.linkedin.com/in/kejiyarani/" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="https://www.github.com/kejiya-rani23" title="Github">
+                                    <i class="fab fa-github-square"></i>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/@kejiyarani" title="Twitter">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a> 
+                            </li>
+                            <li> 
+                                <a href="https://www.facebook.com/kejiyarani" title="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://keiyarani.com">
+                                    <i class="fab fa-globe"></i>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="project-sidebar-block">
+                        <h2>About This Project</h2>
+                        <ul class="social">
+                            <li>
+                                <a href="#" title="Node.js">
+                                    <i class="fab fa-node-js"></i>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#" title="JavaScript">
+                                    <i class="fab fa-js-square"></i>
+                                </a> 
+                            </li>
+                            <li> 
+                                <a href="#" title="HTML5">
+                                    <i class="fab fa-html5"></i>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="#" title="CSS3">
+                                    <i class="fab fa-css3"></i>
+                                </a> 
+                            </li>
+                            <li>
+                                <a href="#" title="Linux">
+                                    <i class="fab fa-linux"></i>
+                                </a> 
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+
+                    <div class="project-sidebar-block">
+                        <h2>Resources</h2>
+                        <div class="project-sidebar-links">
+                            {{#each project.relatedProjects}}
+                                <div class="project-sidebar-links">
+                                    <a href="/projects/{{link}}" class="bc-item">{{name}}</a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item bc-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                    <div class="project-sidebar-block">
+                        <h1 class="display-4">Hi! I'm Kejiya Rani.</h1>
+                        <br>
+                        <p class="lead" style="text-align:justify;">I'm a student <a href="https://www.zinetgo.com">ZinetGo</a></p>
+                        <br>
+                        <hr>
+                    </div>
+                    
+                    <div class="project-sidebar-block">
+                        <h2 class="display-4">About This Project</h2>
+                        <br>
+                        <p class="lead" style="text-align:justify;">I started this project how to build a portfolio app using MEAN. And since then, this has been one of the makor project that always mention during the sessions. This project includes all the aspects of the full stack development. A very small project though but can be really good to start learning MEAN.</p>
+                        <br>
+                        <p class="lead" style="text-align:justify;">I am using <a href="#">Bootstrap</a>, <a href="#">Node.js</a> &amp; <a href="#">Express js</a> to build this.</p>
+                        <br>
+                        <hr>
+                    </div>
+
+                    <div class="project-sidebar-block">
+                        <h2 class="display-4">Project Timelines</h2>
+                        <br>
+                        <p class="lead" style="text-align:justify;">In this section we will discuss how much time it will take to build this project, followed by a steo by step guide.</p>
+                        <br>
+                        <ul>
+                            <li>
+                                <a class="bc-item" href="#" title="Static Portfolio Site">
+                                    Step 1: Static Portfolio Site - Using Bootstrap 4
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Rewrite the static site using Node">
+                                    Step 2: Rewrite the static site using Node, Express &amp; Handlebars
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Add some test data">
+                                    Step 3: Add some test data to make it look like a dynamic site
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Build all the pages">
+                                    Step 4: Build all the pages - home, projects, blog, about, contact
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Design the database - MongoDB">
+                                    Step 5: Design the database using NoSQL &amp; MongoDB
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Connect to MongoDB and get data">
+                                    Step 6: Now we will actually display the data that comes from the DB
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Build RESTFUL API's">
+                                    Step 7: Build the RESTFUL API's
+                                </a> 
+                            </li>
+                            <li>
+                                <a class="bc-item" href="#" title="Integrate the API's">
+                                    Step 8: Integrate the API's with our Express App
+                                </a> 
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

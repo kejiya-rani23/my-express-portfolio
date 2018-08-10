@@ -1,0 +1,25 @@
+<form class="form-signin" action="/signin" method="POST">
+    <a href="/">
+        <img class="mb-4" src="/images/logo.jpg" alt="" width="72" height="72">
+    </a>
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{#each messages}}
+                {{this}}
+                <br>
+            {{/each}}
+        </div>
+    {{/if}}
+    <label for="email" class="sr-only">Email address</label>
+    <input type="text" name="email" id="email" class="form-control" placeholder="Email address"  autofocus>
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" name="password" id="password" class="form-control" placeholder="Password" >
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy; Kejiya Rani, 2017-2018</p>
+</form>

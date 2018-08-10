@@ -1,0 +1,60 @@
+.active{
+    color:#fff !important;
+    border-bottom: 2px solid #fff;
+}
+.active-m{
+    color:#fff !important;
+    font-weight: bold;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bc-item{
+    color: #007bff;
+}
+
+.project-detail-sb{
+    border-right:1px solid #e9ecef;
+}
+
+.project-sidebar-block{
+    padding: 10px 0px;
+}
+
+.project-sidebar-block h2{
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+.project-sidebar-links{
+    margin: 10px 0px;
+}
+
+.no-top-margin{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+}
+
+.breadcrumb{
+    background-color: #f8f9fa;
+    padding: 0px;
+}
+
+.navbar-toggler:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: rgba(255,255,255,.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+.form-label-group{
+    padding-bottom: 15px;
+}

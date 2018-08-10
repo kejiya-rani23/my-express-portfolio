@@ -1,0 +1,85 @@
+<main role="main">
+    <div class="album py-3 bg-light">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-3 project-detail-sb">
+                    <div class="project-sidebar-block no-top-margin">
+                        <h2 class="no-top-margin">Links</h2>
+                        <div class="project-sidebar-links">
+                            <a href="/projects/{{project.alias}}/demo" class="btn btn-primary">Live Demo</a>
+                        </div>
+                        <div class="project-sidebar-links">
+                            <a target="_blank" href="{{ project.githubUrl }}" class="btn btn-secondary">Github Link</a>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="project-sidebar-block">
+                        <h2>Tags</h2>
+                        <div class="project-sidebar-links">
+                            {{#each project.tags}}
+                                <a href="/projects?tags={{name}}" class="project-sidebar-links"><span class="badge badge-{{class}}">{{name}}</span></a>
+                            {{/each}}
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    <div class="project-sidebar-block">
+                        <h2>Related Projects</h2>
+                        <div class="project-sidebar-links">
+                            {{#each project.relatedProjects}}
+                                <div class="project-sidebar-links">
+                                    <a href="/projects/{{link}}" class="bc-item">{{name}}</a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="project-sidebar-block">
+                        <h2>Resources</h2>
+                        <div class="project-sidebar-links">
+                            {{#each project.relatedProjects}}
+                                <div class="project-sidebar-links">
+                                    <a href="/projects/{{link}}" class="bc-item">{{name}}</a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item bc-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item bc-item"><a href="/projects">Projects</a></li>
+                            <li class="breadcrumb-item" aria-current="page">{{ project.name }}</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-3">{{ project.name }} </h1>
+                    <br>
+                    <p class="lead">{{ project.description }}</p>
+                    <br>
+                    <div id="projectSlider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            {{#each project.imageSliders}}
+                                <div class="carousel-item {{#if @first}}active{{/if}}">
+                                    <img class="d-block w-100" src="/projects/{{../project.alias}}/images/slides/{{ this }}" alt="Slide {{@index}}">
+                                </div>
+                            {{/each}}
+                        </div>
+                        <a class="carousel-control-prev" href="#projectSlider" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#projectSlider" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+                    <h2>Watch a live demo <a class="bc-item" href="/projects/{{project.alias}}/demo">here</a></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

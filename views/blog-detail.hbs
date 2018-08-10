@@ -1,0 +1,85 @@
+<main role="main">
+    <div class="album py-3 bg-light">
+        <div class="container"> 
+            <div class="row">
+                <div class="col-md-3 project-detail-sb">
+                    <div class="project-sidebar-block">
+                        <h2>Categories</h2>
+                        {{#each categories}}
+                            <div class="project-sidebar-links">
+                                <a href="/blog?category={{this}}" class="bc-item">{{this}}</a>
+                            </div>
+                        {{/each}}
+                    </div>
+                    <hr>
+                    <div class="project-sidebar-block">
+                        <h2>Archives</h2>
+                        <div class="project-sidebar-links">
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">June 2018</a>
+                            </div>
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">May 2018</a>
+                            </div>
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">April 2018</a>
+                            </div>
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">Match 2018</a>
+                            </div>
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">February 2018</a>
+                            </div>
+                            <div class="project-sidebar-links">
+                                <a href="#" class="bc-item">January 2018</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-sidebar-block">
+                        <h2></h2>
+                        <div class="project-sidebar-links">
+                            {{#each blog.relatedProjects}}
+                                <div class="project-sidebar-links">
+                                    <a href="/projects/{{link}}" class="bc-item">{{name}}</a>
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item bc-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item bc-item"><a href="/blog">Blog</a></li>
+                            <li class="breadcrumb-item" aria-current="page">{{ blog.name }}</li>
+                        </ol>
+                    </nav>
+                    <h1 class="display-3">{{ blog.name }} </h1>
+                    <br>
+                    <p class="lead">{{ blog.description }}</p>
+                    <br>
+                    <div id="projectSlider" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            {{#each blog.imageSliders}}
+                                <div class="carousel-item {{#if @first}}active{{/if}}">
+                                    <img class="d-block w-100" src="/images/blog/{{this}}" alt="Slide {{@index}}">
+                                </div>
+                            {{/each}}
+                        </div>
+                        <a class="carousel-control-prev" href="#projectSlider" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#projectSlider" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    <br>
+                    <h2>Watch a live demo <a class="bc-item" href="/projects/{{blog.alias}}/demo">here</a></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
